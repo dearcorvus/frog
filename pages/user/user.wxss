@@ -1,0 +1,84 @@
+/* pages/user/user.wxss */
+page{
+  background: #f5f5f5;
+}
+.header_box{
+  width: 100%;
+  height: 160rpx;
+  background: #fff;
+  padding: 0 45rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.header_img{
+  width: 120rpx;
+  height: 120rpx;
+}
+.header_img image{
+  width: 100%;
+  height: 100%;
+}
+.header_title{
+  font-size: 32rpx;
+  margin-left: 26rpx;
+}
+
+.nav_box {
+  width: 100%;
+  height: 146rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15rpx;
+}
+.nav_item{
+  width: 80rpx;
+  font-size: 20rpx;
+  text-align: center;
+}
+.nav_item image{
+  width: 50rpx;
+  height: 50rpx;
+  display: block;
+  margin: 0 auto 14rpx;
+}
+
+.coupon_box{
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  background: #fff;
+  margin-top: 15rpx;
+}
+.coupon_item{
+  width: 100%;
+  height: 110rpx;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 26rpx;
+  line-height: 110rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.coupon_title{
+  display: flex;
+  align-items: center;
+}
+.coupon_title image{
+  width: 48rpx;
+  height: 38rpx;
+  margin-right: 10rpx;
+}
+.right_img{
+  width:16rpx;
+  height: 22rpx; 
+}
+
+.bottom{
+  width: 100%;
+  height: 80rpx;
+  margin-top: 15rpx;
+  background: #fff;
+}

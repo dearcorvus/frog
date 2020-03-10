@@ -1,0 +1,50 @@
+<wxs module="utils">
+    var join = function(a,b) {
+        return a+b
+    };
+    var isNotSlot = function(v) {
+        return typeof v !== 'string'
+    }
+    module.exports = {
+        join: join,
+        isNotSlot: isNotSlot
+    }
+</wxs>
+
+<view wx:if="{{mask}}" class="weui-mask {{show ? '' : 'weui-mask_hidden'}} {{maskClass}}" bindtap="closeActionSheet"></view>
+<view class="weui-actionsheet {{show ? 'weui-actionsheet_toggle' : ''}} {{extClass}}">
+    <!-- 标题 -->
+    <block  wx:if="{{title}}"> 
+        <view class="weui-actionsheet__title">
+            <block  wx:if="{{logo}}"> 
+              <image src="{{logo}}" class="weui-actionsheet__logo"></image>
+            </block>
+            <view class="weui-actionsheet__title-text">{{title}}</view>
+        </view>
+    </block>
+      <view  class="weui-actionsheet__action"  hover-class="none">
+            <view  class="weui-actionsheet__cells"  >
+              获取你的昵称、头像、地区及性别
+            </view>  
+      </view>
+    <block  wx:if="{{actions}}"> 
+    <view   class="weui-actionsheet__action"  hover-class="none" >
+            <view  class=" weui-actionsheet_border"    wx:for-index="actionIndex"  >
+              <view class="weui-actionsheet__info">
+                <!-- <image src="{{actions.avatarUrl ? actions.avatarUrl  :' ../../public/img/header.jpg'}}"></image> -->
+                <open-data type="userAvatarUrl" class='weui-actionsheet__img'></open-data>
+                <view>
+                  <open-data type="userNickName" class='weui-actionsheet__name'></open-data>
+                  <text>微信个人信息</text>
+                </view>
+              </view>
+              <mp-icon icon="done" color="green" size="{{20}}"></mp-icon>
+            </view>  
+    </view>
+    </block>
+    <!-- 取消按钮 -->
+    <view class="weui-actionsheet__button" wx:if="{{showCancel}}">
+        <view class="weui-actionsheet__btn" data-type="close" id="iosActionsheetCancel" bindtap="closeActionSheet">{{cancelText}}</view>
+        <view class="weui-actionsheet__btn" data-type="close" id="iosActionsheetCancel" bindtap="agreeActionSheet">{{agreeText}}</view>
+    </view>
+</view>

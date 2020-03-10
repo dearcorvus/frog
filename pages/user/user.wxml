@@ -1,0 +1,95 @@
+<!--pages/user/user.wxml-->
+<!-- 头部 -->
+<view class="header_box">
+  <view class="header_img">
+    <image src="../../public/img/user.jpg"  bindtap="btnClick"></image>
+  </view>
+  <button open-type="getUserInfo" bindgetuserinfo="processLogin"> 点击显示头像</ button>
+  <!-- <view class="header_title">点击显示头像</view> -->
+</view>
+
+<!-- 分类 -->
+<view class="nav_box">
+    <view class="nav_item">
+        <image src="../../public/img/zf.jpg"></image>
+        <text>待支付</text>
+    </view>
+    <view class="nav_item">
+        <image src="../../public/img/fx.jpg"></image>
+        <text>待分享</text>
+    </view>
+    <view class="nav_item">
+        <image src="../../public/img/cx.jpg"></image>
+        <text>待出行</text>
+    </view>
+    <view class="nav_item">
+        <image src="../../public/img/sh.jpg"></image>
+        <text>待售后</text>
+    </view>
+    <view class="nav_item">
+        <image src="../../public/img/all.jpg"></image>
+        <text>全部</text>
+    </view>    
+</view>
+
+<!-- 卡券 -->
+<view class="coupon_box">
+  <view class="coupon_item">
+      <view class="coupon_title">
+            <image src="../../public/img/yh.jpg"></image>
+            优惠券
+      </view>
+      <image src="../../public/img/right.jpg" class="right_img"></image>
+  </view>
+  <view class="coupon_item">
+      <view class="coupon_title">
+            <image src="../../public/img/yh.jpg"></image>
+            优惠券
+      </view>
+      <image src="../../public/img/right.jpg" class="right_img"></image>
+  </view>
+  <view class="coupon_item">
+      <view class="coupon_title">
+            <image src="../../public/img/yh.jpg"></image>
+            优惠券
+      </view>
+      <image src="../../public/img/right.jpg" class="right_img"></image>
+  </view>
+  <view class="coupon_item">
+      <view class="coupon_title">
+            <image src="../../public/img/yh.jpg"></image>
+            优惠券
+      </view>
+      <image src="../../public/img/right.jpg" class="right_img"></image>
+  </view>
+</view>
+
+<!-- 反馈意见 -->
+<view class="coupon_box">
+  <view class="coupon_item">
+      <view class="coupon_title">
+            <image src="../../public/img/yh.jpg"></image>
+            常用出行人
+      </view>
+      <image src="../../public/img/right.jpg" class="right_img"></image>
+  </view>
+  <view class="coupon_item">
+      <view class="coupon_title">
+            <image src="../../public/img/yh.jpg"></image>
+            联系客服
+      </view>
+      <image src="../../public/img/right.jpg" class="right_img"></image>
+  </view>
+  <view class="coupon_item">
+      <view class="coupon_title">
+            <image src="../../public/img/yh.jpg"></image>
+            意见反馈
+      </view>
+      <image src="../../public/img/right.jpg" class="right_img"></image>
+  </view>
+</view>
+
+<view class="bottom"></view>
+<!--WXML示例代码-->
+<mp-actionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{groups}}" title="{{title}}" logo="{{logo}}" >
+</mp-actionSheet>
