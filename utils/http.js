@@ -1,5 +1,5 @@
 const ui = require("../utils/ui.js")
-const base_url = ""
+const base_url = "http://101.200.123.34:82/public/index.php/api/"
 
 const request = function(method){
 
@@ -13,7 +13,13 @@ const request = function(method){
     if (obj.showLoading != false){
       ui.showLoading('加载中...')
     }
+    var data = {}
+    if (obj.data) data = obj.data
+    var header = { 'content-type': 'application/json' }
 
+    if (!obj.url.startsWith('http')) {
+      obj.url = base_url + obj.url
+    }
     try{
       var value = wx.getStorageSync('cookie')
       if(value){
@@ -24,9 +30,9 @@ const request = function(method){
     }
 
     wx.request({
-      url: encodeURL(obj.url),
+      url: encodeURI(obj.url),
       method:method,
-      data:data,
+      data: data,
       header:header,
       success:(res)=>{
         console.log(res)

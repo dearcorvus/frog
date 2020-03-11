@@ -94,7 +94,7 @@ module.exports =
 
   const ui = require('../../utils/ui.js')
   const http = require('../../utils/http.js')
-
+  const auth = require('../../utils/auth')
 Component({
     options: {
         multipleSlots: true,
@@ -173,7 +173,13 @@ Component({
         },
         // 允许获取
       agreeActionSheet: function agreeActionSheet(){
-        
+
+        auth.checkHasLogined().then(isLogined => {
+          if (!isLogined) {
+            auth.login();
+            ui.navigateTo('../../pages/login/login')
+          }
+        })
       }
     }
 });

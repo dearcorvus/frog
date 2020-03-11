@@ -1,36 +1,17 @@
-// pages/user/user.js
-const app = getApp()
-const auth = require('../../utils/auth')
-const ui = require('../../utils/ui')
+// pages/login/login.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    showActionsheet: false,
-    title:"青蛙旅行申请",
-    logo:"../../public/img/user.jpg",
-    groups: []
-  },
-  close: function () {
-    this.setData({
-      showActionsheet: false
-    })
-  },
-  btnClick: function () {
-    let that = this;
-    // that.setData({
-    //   showActionsheet: true
-    // })
-    ui.navigateTo('../loginModel/loginModel');
 
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
 
   },
 
@@ -81,5 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
+  }
 })

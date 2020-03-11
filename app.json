@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/user/user",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/login/login",
+    "pages/loginModel/loginModel"
   ],
   "window": {
     "backgroundTextStyle": "light",

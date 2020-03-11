@@ -1,39 +1,27 @@
-// pages/user/user.js
-const app = getApp()
-const auth = require('../../utils/auth')
+// pages/loginModel/loginModel.js
 const ui = require('../../utils/ui')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    showActionsheet: false,
-    title:"青蛙旅行申请",
-    logo:"../../public/img/user.jpg",
-    groups: []
-  },
-  close: function () {
-    this.setData({
-      showActionsheet: false
-    })
-  },
-  btnClick: function () {
-    let that = this;
-    // that.setData({
-    //   showActionsheet: true
-    // })
-    ui.navigateTo('../loginModel/loginModel');
 
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
 
   },
-
+/**
+ * 返回上一页
+ */
+  navigateBack:function(){
+    ui.navigateBack();
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -81,5 +69,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
+  }
 })

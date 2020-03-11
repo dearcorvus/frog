@@ -2,10 +2,9 @@
 <!-- 头部 -->
 <view class="header_box">
   <view class="header_img">
-    <image src="../../public/img/user.jpg"  bindtap="btnClick"></image>
+      <image src="../../public/img/user.jpg"  bindtap="btnClick"></image>
   </view>
-  <button open-type="getUserInfo" bindgetuserinfo="processLogin"> 点击显示头像</ button>
-  <!-- <view class="header_title">点击显示头像</view> -->
+  <view class="header_title">点击显示头像</view>
 </view>
 
 <!-- 分类 -->

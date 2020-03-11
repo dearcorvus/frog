@@ -1,0 +1,10 @@
+<!--pages/loginModel/loginModel.wxml-->
+<view class="login_box">
+  <view class="login_phone login_item">账号登录</view>
+  <view class="login_wx login_item"> 授权登录  </view>
+  <view class="login_text">
+    <view>1.同意当前小程序获取我的微信头像;</view>
+    <view>2.同意当前小程序获取我的微信昵称等其他信息;</view>
+  </view>
+  <view class="login_close login_item"  bindtap="navigateBack">取消登录</view>
+</view>

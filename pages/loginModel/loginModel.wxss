@@ -1,0 +1,29 @@
+/* pages/loginModel/loginModel.wxss */
+.login_item{
+  width: 690rpx;
+  height: 90rpx;
+  margin:30rpx auto; 
+  font-size: 34rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 90rpx;
+  border-radius: 3px;
+}
+
+.login_phone{
+  background: #52a452;
+}
+.login_wx{
+  background: #52a452;
+}
+.login_close{
+  background: #cb4448;
+}
+
+.login_text{
+  width: 680rpx;
+  margin: 0 auto;
+  font-size: 22rpx;
+  color: #151517;
+  line-height: 60rpx;
+}
