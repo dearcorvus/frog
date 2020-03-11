@@ -1,6 +1,8 @@
 <!--pages/loginModel/loginModel.wxml-->
 <view class="login_box">
-  <view class="login_phone login_item">账号登录</view>
+  <navigator url="/pages/login/login" >
+      <view class="login_phone login_item">账号登录</view>
+  </navigator>
   <view class="login_wx login_item"> 授权登录  </view>
   <view class="login_text">
     <view>1.同意当前小程序获取我的微信头像;</view>

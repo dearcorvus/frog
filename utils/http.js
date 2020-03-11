@@ -1,12 +1,12 @@
 const ui = require("../utils/ui.js")
-const base_url = "http://101.200.123.34:82/public/index.php/api/"
+const util = require('../utils/util.js')
+var base64 = require('../utils/base64');
+// const base_url = "http://101.200.123.34:82/public/index.php/api/"
+const base_url = "http://127.0.0.1:899/tp/public/index.php/api/"
 
 const request = function(method){
 
   return (obj)=>{
-
-    console.log('require obj')
-    console.log(obj)
 
     if(!obj || !obj.url) return;
 
@@ -20,6 +20,10 @@ const request = function(method){
     if (!obj.url.startsWith('http')) {
       obj.url = base_url + obj.url
     }
+    var  dayTime = util.formatTime(new Date());
+    header['sign'] = base64.encode(dayTime)
+    header['timestamp'] = dayTime
+    console.log(header['sign'] )
     try{
       var value = wx.getStorageSync('cookie')
       if(value){
@@ -36,6 +40,10 @@ const request = function(method){
       header:header,
       success:(res)=>{
         console.log(res)
+        ui.hideLoading(); 
+        if(res.data.code == 200){
+          ui.showToast(res.data.msg)
+        }
         if(!res.data || res.statusCode >= 300 || res.statusCode < 200){
           ui.showToast("接口请求失败,稍后重试!")
           if(obj.fail){

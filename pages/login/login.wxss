@@ -1,1 +1,75 @@
 /* pages/login/login.wxss */
+.root {
+    /* display: flex;  */
+    justify-content: center; 
+    align-items: center;
+}
+
+.view-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 50px 20px;
+}
+
+.root > view {
+    display: flex;
+    flex-direction: row;
+}
+.view-title {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    font-size: 16px;
+    flex: 1;
+    text-align: center;
+}
+
+.active {
+    font-weight: bold;
+    color: #ea6f5a;
+    border-bottom: 2px solid #ea6f5a;
+}
+
+.view-input {
+    border: 1px solid #c8c8c8;
+    background-color: #f1f1f1;
+    padding: 10px;
+    display: flex;
+    background-color: hsla(0,0%,71%,.1);
+    align-items: center;
+}
+
+.view-input image {
+    width: 20px;
+    height: 20px;
+}
+
+.view-input input { 
+    margin-left: 15px;
+}
+
+.input-top {
+    border-radius: 4px 4px 0 0;
+    border-bottom: none;
+}
+
+.input-center {
+    border-bottom: none;
+}
+
+.input-bottom {
+    border-radius: 0 0 4px 4px;
+}
+
+button {
+    margin-top: 20px;
+    background-color: #3194d0;
+    color: #fff;
+    font-size: 16px;
+}
+
+swiper {
+    width: 100vw;
+    height: 100%;
+}

@@ -1,4 +1,7 @@
 /* pages/loginModel/loginModel.wxss */
+.login_box{
+  padding-top: 50rpx;
+}
 .login_item{
   width: 690rpx;
   height: 90rpx;

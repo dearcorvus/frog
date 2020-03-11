@@ -70,3 +70,36 @@ export const toDetail = (url)=>{
     }
   })
 }
+
+//密码验证
+export const password = (password)=> {
+  if (!password.trim()) {
+    showToast('密码不可以为空!')
+    return false
+  }else{
+    if (password.trim().length < 6 || password.trim().length > 20 ){
+      showToast('密码不正确!')
+      return false
+    }
+  }
+  return true;
+}
+
+//手机号验证
+export const phone = (phone) => {
+  if (!phone.trim()) {
+    showToast('手机号不可以为空!')
+    return false
+  } else {
+    if (phone.trim().length != 11 ) {
+      showToast("手机号码有误，请重填");
+      return false
+    }else{
+      if (!(/^1[3456789]\d{9}$/.test(phone))) {
+        showToast("手机号码有误，请重填");
+        return false;
+      } 
+    }
+  }
+  return true;
+}
