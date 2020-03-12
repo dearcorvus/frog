@@ -3,7 +3,7 @@ const util = require('../utils/util.js')
 const base64 = require('../utils/base64');
 const sign = require('../utils/sign');
 // const base_url = "http://101.200.123.34:82/public/index.php/api/"
-const base_url = "http://127.0.0.1:899/tp/public/index.php/api/"
+const base_url = "http://127.0.0.1:899/tp/public/index.php/api/v2."
 
 const request = function(method){
 
@@ -21,19 +21,18 @@ const request = function(method){
     if (!obj.url.startsWith('http')) {
       obj.url = base_url + obj.url
     }
-    var  dayTime = util.formatTime(new Date());
-
-    header['timestamp'] = dayTime
-    data['timestamp'] = dayTime
-    header['sign'] = sign.sign(data)
-
     
-    console.log(header['sign'] )
     try{
-      var value = wx.getStorageSync('cookie')
-      if(value){
-        header['cookie'] = value
-      }
+
+      var dayTime = util.formatTime(new Date());
+
+      header['timestamp'] = dayTime
+      data['timestamp'] = dayTime
+      header['sign'] = sign.sign(data)
+      // var value = wx.getStorageSync('cookie')
+      // if(value){
+      //   header['cookie'] = value
+      // }
     } catch(e){
 
     }

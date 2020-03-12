@@ -4,7 +4,9 @@
     "pages/user/user",
     "pages/home/home",
     "pages/login/login",
-    "pages/loginModel/loginModel"
+    "pages/loginModel/loginModel",
+    "pages/ticket/ticket",
+    "pages/visa/visa"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,7 +15,8 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#3c3c3c",
+    "color": "#bfbfbf",
+    "selectedColor": "#52eac1",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -22,16 +25,16 @@
         "selectedIconPath": "public/img/chome.png"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "public/img/home.png",
-        "selectedIconPath": "public/img/home.png"
+        "pagePath": "pages/ticket/ticket",
+        "text": "机票",
+        "iconPath": "public/img/jp.png",
+        "selectedIconPath": "public/img/cjp.png"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "public/img/home.png",
-        "selectedIconPath": "public/img/home.png"
+        "pagePath": "pages/visa/visa",
+        "text": "签证",
+        "iconPath": "public/img/qz.png",
+        "selectedIconPath": "public/img/cqz.png"
       },
       {
         "pagePath": "pages/user/user",
