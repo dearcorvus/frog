@@ -1,1 +1,31 @@
 /**index.wxss**/
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  border-bottom: #CCCCCC solid 1px;
+  margin: 28rpx;
+  width: 600rpx;
+  padding:10rpx;
+  height: 70rpx;
+}
+ 
+ 
+.flex-box-header{
+  width: 25%;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  color: #999999;
+ 
+  /* line-height: 60rpx; */
+}
+ 
+.flex-box-content{
+  width: 70%;
+  margin-top: 0rpx; 
+  font-size: 45rpx;
+}
+.flex-box-content-pricker{
+  margin-top: 0rpx; 
+  width: 70%;
+  font-size: 45rpx;
+}  

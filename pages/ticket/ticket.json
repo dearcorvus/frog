@@ -1,3 +1,6 @@
 {
+  "navigationBarTitleText":"飞机票查询, 机票预...",
+  "navigationBarTextStyle":"white",
+  "navigationBarBackgroundColor":"#4c9eea",
   "usingComponents": {}
 }

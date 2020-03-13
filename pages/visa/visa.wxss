@@ -1,1 +1,101 @@
 /* pages/visa/visa.wxss */
+page{
+  background-color: #f7f7f7;
+}
+.visa_search_box{
+  width: 100%;
+  /* background-color: #f7f7f7; */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.visa_search{
+  display: flex;
+  width: 700rpx;
+  height: 66rpx;
+  background-color: #fff;
+  margin: 12rpx auto;
+  border-radius: 60rpx;
+  font-size: 28rpx;
+  color: #8b8b8b;
+  line-height: 66rpx;
+}
+.visa_search view{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.visa_search view:nth-child(1){
+  width: 180rpx;
+  height: 66rpx;
+  color: #567db4;
+  border-right: 1px solid #e2dfe6;
+}
+.serarch_btn{
+  margin:0 20rpx;
+}
+.serarch_arrow{
+  transform:rotate(90deg);
+  margin-left: 14rpx;
+}
+
+.visa_banner_box{
+  width: 100%;
+  height: 330rpx;
+  background-color: #1e3b77;
+}
+
+.visa_nav{
+  width: 100%;
+  height: 135rpx;
+  font-size: 26rpx;
+  color: #424242;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+}
+.visa_list_box{
+  width: 100%;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.visa_column{
+  width: 100%;
+  height: 90rpx;
+  font-size: 30rpx;
+  color: #000;
+  line-height: 90rpx;
+  display: flex;
+  justify-content: space-around;
+  border-bottom:  1px solid #e5e5e5;
+}
+.visa_column view{
+  padding: 0 20rpx;
+  height: 90rpx;
+  border-bottom: 6rpx solid #fff;
+  box-sizing: border-box;
+}
+.visa_column .visa_column_check{
+  color:#3b82ea;
+  border-bottom: 6rpx solid #3b82ea;
+}
+.visa_list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+.visa_list::after{
+  content:"";
+  width: 30%;
+}
+.visa_list_item{
+  width: 30%;
+  border-radius: 4rpx;
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+.visa_list_item image{
+  width: 100%;
+}

@@ -1,12 +1,14 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/user/user",
     "pages/home/home",
+    "pages/visaSearch/visaSearch",
+    "pages/visa/visa",
+    "pages/ticket/ticket",
+    "pages/user/user",
     "pages/login/login",
     "pages/loginModel/loginModel",
-    "pages/ticket/ticket",
-    "pages/visa/visa"
+    "pages/citys/citys"
   ],
   "window": {
     "backgroundTextStyle": "light",

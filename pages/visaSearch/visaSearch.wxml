@@ -1,0 +1,49 @@
+<!--pages/visaSearch/visaSearch.wxml-->
+<!-- 查询 -->
+<view class="visa_top">
+  <view class="visa_search">
+    <mp-icon type="field" icon="search" color="#4a4a4a" size="20" extClass='serarch_btn'></mp-icon>
+    <view>目的地\主题或关键词</view>
+  </view>
+</view>
+
+<!-- 热门目的地 -->
+<view class="hot_city">
+  <text class="hot_title">热门目的地</text>
+  <view class="hot_city_box">
+    <view>韩国</view>
+    <view>日本</view>
+    <view>新加坡</view>
+    <view>泰国</view>
+    <view>俄罗斯</view>
+    <view>韩国</view>
+    <view>韩国</view>
+  </view>
+</view>
+
+<!-- 城市排序 -->
+
+<view class="word_sort" scroll-into-view="{{locationTo}}">
+<block  wx:for="{{cityResults}}" wx:key="unique">
+  <text  wx:if="{{item.cityPinYin.length > 1}}"  class="word_title" data-id='{{item.cityName}}' bindtap='bindAZ'>{{item.cityName}}</text>
+  <view class="word_sort_list">
+    <block  wx:for="{{cityResults}}" wx:key="unique">  
+      <view>{{item.cityName}}</view>
+    </block>
+  </view>
+</block>
+</view>
+
+<view class='city-item-content' scroll-into-view="{{locationTo}}">
+<view wx:for="{{cityResults}}" wx:key="unique">
+<view wx:if="{{item.cityPinYin.length > 1}}" class='city-item' data-cityname='{{item.cityName}}' bindtap='citySelected'>{{item.cityName}}</view>
+<view wx:else class='city-item-A-Z' data-cityname='{{item.cityName}}'>{{item.cityName}}</view>
+<!-- <view data-cityname='{{item.cityName}}' bindtap='citySelected' >{{item.cityName}}</view> -->
+</view>
+</view>
+
+<view class='a-z' catchtouchmove="handlerMove"  atchtouchend="handlerEnd" >
+  <view wx:for="{{cityAZ}}" wx:key="unique">
+    <view data-id='{{item.cityName}}' bindtap='bindAZ'>{{item.cityName}}</view>
+  </view>
+</view>

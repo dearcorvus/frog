@@ -1,2 +1,41 @@
 <!--pages/ticket/ticket.wxml-->
-<text>机票</text>
+<view class="ticket_search_box">
+  <!-- 形成切换 -->
+  <view class="ticket_serch_switch">
+    <view class=" {{ticketSwitch == 1 ? 'ticket_serch_check' : '' }}" bindtap="ticketSwitch">单程</view>
+    <view class=" {{ticketSwitch == 2 ? 'ticket_serch_check' : '' }}" bindtap="ticketSwitch">往返</view>
+  </view>
+
+  <view class="ticket_choose">
+    <!-- 选择城市 -->
+    <view class="ticket_choose_city">
+      <view>北京</view>
+      <image src="../../public/img/search.jpg" class="serch_logo"></image>
+      <view>上海</view>
+    </view>
+    <!-- 时间安排 -->
+    <view class="ticket_date_box">
+      <view>
+          03月13日
+          <text>今天</text>
+      </view>
+      <view>
+          03月14日
+          <text>明天</text>
+      </view>      
+    </view>
+    <!-- 仓位 -->
+    <view class="ticket_house">
+      <view>经济舱</view>
+      <view>酒店+机票</view>
+    </view>
+    <view class="ticke_btn">搜索</view>
+    <!-- 菜单 -->
+    <view class="ticke_nav">
+      <view>机票订单</view>
+      <view>航班助手</view>
+      <view>在线选座</view>
+      <view>低价订阅</view>
+    </view>
+  </view>
+</view>

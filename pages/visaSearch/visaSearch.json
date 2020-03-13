@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "签证办理",
+  "navigationBarTitleText": "选择签证国家",
   "navigationBarTextStyle": "white",
   "navigationBarBackgroundColor": "#4c9eea",
   "usingComponents": {

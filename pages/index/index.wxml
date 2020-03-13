@@ -1,2 +1,7 @@
 <!--index.wxml-->
-<view>首页</view>
+<view class='flex-box' data-id='出发城市'>
+  <view class='flex-box-header'>选择城市</view>
+  <view class="flex-box-content">
+    <input name='beginCity' value='{{trainCity}}' disabled='disabled' placeholder="" bindtap='bindCityView' class='input-city'/>
+  </view>
+</view>

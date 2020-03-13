@@ -3,25 +3,24 @@
 const app = getApp()
 const http = require('../../utils/http.js')
 const ui = require('../../utils/ui.js')
+
+
 Page({
   data: {
-    showActionsheet: false,
-    logo:'../../public/img/zf.jpg',
-    titleActionsheet:'nihao',
+    trainCity: ''
   },
-  btnClick:function(){
-   let data =  wx.setStorageSync()
-  console.log(data)
+  onLoad: function (options) {
 
-    // let that = this;
-
-
-
-    // that.setData({
-    //   showActionsheet:true
-    // })
   },
-  agreeActionSheet:function(){
-    console.log(123);
+  onPullDownRefresh: function () {
+    wx.stopPullDownRefresh();
+  },
+  bindCityView: function () {
+    wx.navigateTo({
+      url: '../citys/citys',
+    })
+  },
+  onShow: function () {
+    this.setData({ trainCity: app.globalData.trainCity })
   }
 })

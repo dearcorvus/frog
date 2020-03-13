@@ -1,2 +1,57 @@
 <!--pages/visa/visa.wxml-->
-<text>签证</text>
+<!-- 搜索 -->
+<view class="visa_search_box">
+  <view class="visa_search" bindtap="visaSearch">
+    <view>北京 <mp-icon type="field" icon="arrow" color="#567db4" size="10" extClass='serarch_arrow'></mp-icon></view>
+    <view><mp-icon type="field" icon="search" color="#4a4a4a" size="16" extClass='serarch_btn'></mp-icon> 签证国家和地区</view>
+  </view>
+</view>
+<!-- banner -->
+<view class="visa_banner_box">
+</view>
+
+<!-- 电子导航 -->
+<view class="visa_nav">
+  <view>超级VIP</view>
+  <view>多年多签</view>
+  <view>电子签</view>
+</view>
+
+<!-- 签证产品列表-->
+<view class="visa_list_box">
+  <!-- 签证分类 -->
+  <view class="visa_column">
+    <view class="visa_column_check">热门</view>
+    <view>亚洲</view>
+    <view>美洲</view>
+    <view>大洋洲</view>
+    <view>欧洲</view>
+  </view>
+  <!-- 签证列表 -->
+  <view class="visa_list">
+    <view class="visa_list_item">
+      <image src="../../public/img/goods.jpg" mode="widthFix"></image>
+    </view>
+    <view class="visa_list_item">
+      <image src="../../public/img/goods.jpg" mode="widthFix"></image>
+    </view>
+    <view class="visa_list_item">
+      <image src="../../public/img/goods.jpg" mode="widthFix"></image>
+    </view>
+    <view class="visa_list_item">
+      <image src="../../public/img/goods.jpg" mode="widthFix"></image>
+    </view>
+    <view class="visa_list_item">
+      <image src="../../public/img/goods.jpg" mode="widthFix"></image>
+    </view>
+    <view class="visa_list_item">
+      <image src="../../public/img/goods.jpg" mode="widthFix"></image>
+    </view>   
+    <view class="visa_list_item">
+      <image src="../../public/img/goods.jpg" mode="widthFix"></image>
+    </view>
+    <view class="visa_list_item">
+      <image src="../../public/img/goods.jpg" mode="widthFix"></image>
+    </view>                  
+  </view>
+</view>

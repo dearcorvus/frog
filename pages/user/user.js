@@ -20,10 +20,10 @@ Page({
   },
   btnClick: function () {
     let that = this;
-    // that.setData({
-    //   showActionsheet: true
-    // })
-    ui.navigateTo('../loginModel/loginModel');
+    that.setData({
+      showActionsheet: true
+    })
+    // ui.navigateTo('../loginModel/loginModel');
 
   },
   /**

@@ -1,4 +1,6 @@
 // pages/visa/visa.js
+const ui = require('../../utils/ui')
+
 Page({
 
   /**
@@ -6,6 +8,12 @@ Page({
    */
   data: {
 
+  },
+  /**
+   * 跳转查询签证地区
+   */
+  visaSearch:function(){
+    ui.navigateTo("../visaSearch/visaSearch")
   },
 
   /**
