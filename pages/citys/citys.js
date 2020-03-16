@@ -2,6 +2,7 @@ const app = getApp()
 
 Page({
   onLoad: function (options) {
+
     if (this.data.cityResults == null) {
       this.setData({
         cityResults: this.data.citys

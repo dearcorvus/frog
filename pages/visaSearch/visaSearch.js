@@ -1,4 +1,7 @@
 const app = getApp()
+const http = require('../../utils/http.js')
+const ui = require('../../utils/ui.js')
+
 
 Page({
   onLoad: function (options) {
@@ -39,7 +42,7 @@ Page({
         res.forEach(function (re) {
           if (target == re.dataset.cityname) {
             wx.pageScrollTo({
-              scrollTop: re.top + _this.data.scrollNow - 55.5,
+              scrollTop: re.top + _this.data.scrollNow,
               duration: 0
             })
           }
@@ -49,7 +52,7 @@ Page({
       this.data.scrollAZ.forEach(function (re) {
         if (target == re.dataset.cityname) {
           wx.pageScrollTo({
-            scrollTop: re.top + _this.data.scrollNow - 55.5,
+            scrollTop: re.top + _this.data.scrollNow,
             duration: 0
           })
         }
@@ -71,7 +74,7 @@ Page({
   citySelected: function (e) {
     var cityNameTemp = e.currentTarget.dataset.cityname
     app.globalData.trainCity = cityNameTemp
-    wx.navigateBack()
+    ui.navigateTo("../visaCity/visaCity");
   },
   bindSarchInput: function (e) {
     wx.pageScrollTo({
@@ -85,7 +88,8 @@ Page({
 
     if (inputVal == null || inputVal.trim() == '') {
       this.setData({
-        cityResults: citys
+        cityResults: citys,
+        cityHot: false
       })
       return;
     }
@@ -108,7 +112,8 @@ Page({
       }
     }
     this.setData({
-      cityResults: cityResultsTemp
+      cityResults: cityResultsTemp,
+      cityHot: true
     })
   },
   /**
@@ -149,6 +154,7 @@ Page({
   data: {
     scrollAZ: null,
     scrollNow: 0,
+    cityHot:false,
     cityType: 'begin',
     cityResults: null,
     cityAZ: [{ cityName: 'A' }, { cityName: 'B' }, { cityName: 'C' }, { cityName: 'D' }, { cityName: 'E' }, { cityName: 'F' }, { cityName: 'G' }, { cityName: 'H' }, { cityName: 'J' }, { cityName: 'K' }, { cityName: 'L' }, { cityName: 'M' }, { cityName: 'N' }, { cityName: 'P' }, { cityName: 'Q' }, { cityName: 'R' }, { cityName: 'S' }, { cityName: 'T' }, { cityName: 'W' }, { cityName: 'X' }, { cityName: 'Y' }, { cityName: 'Z' },],

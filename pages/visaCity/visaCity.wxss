@@ -1,0 +1,259 @@
+/* pages/visaCity/visaCity.wxss */
+.visa_banner{
+  width: 100%;
+  position: relative;
+}
+.visa_banner image{
+  width: 100%;
+}
+.visa_banner_title{
+  width: 310rpx;
+  height: 74rpx;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 74rpx;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -155rpx;
+  font-size: 26rpx;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  align-items: center;
+}
+.visa_banner_title view{
+  display: flex;
+  align-items: center;
+}
+.serarch_arrow{
+  transform:rotate(90deg);
+  margin: 5rpx 0 0 5rpx;
+}
+
+.visa_notice{
+  width: 100%;
+  height: 100rpx;
+  background-color: #fcf7f1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-top-right-radius: 10rpx;
+  border-top-left-radius: 10rpx;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #c66542;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.visa_notice text:first-child{
+  font-size: 24rpx;
+  color: #c66542;
+  font-weight: 600;
+}
+.visa_notice_item{
+  width: 85%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.visa_nav{
+  width: 100%;
+  height: 90rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e7e7e7;
+  font-size: 30rpx;
+  color: #000;
+  line-height: 90rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.visa_nav view{
+  border-bottom: 5rpx solid #fff;
+}
+.visa_nav .visa_nav_check{
+  color: #4382df;
+  border-bottom: 5rpx solid #4382df; 
+}
+.visa_class{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+}
+.visa_class view{
+  padding: 10rpx 26rpx;
+  font-size: 28rpx;
+  color: #000;
+  background-color: #eeeff4;
+  border-radius: 10rpx;
+  margin-left: 25rpx;
+}
+.visa_class view text{
+  display: block;
+}
+.visa_class view text:nth-child(2){
+  font-size: 20rpx;
+  color: #464749;
+  text-align: center;
+}
+
+.visa_class  .visa_class_check{
+  color: #fff;
+  background-color: #4382df;
+}
+.visa_class .visa_class_check  text:nth-child(2){
+  color: #fff;
+}
+
+.visa_list_box{
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.visa_list_item{
+  width: 100%;
+  height: 240rpx;
+  border-bottom: 1px solid #eeeff4;
+}
+.visa_list_title{
+  font-size: 30rpx;
+  color: #000;
+  margin-top: 10rpx;
+}
+.visa_list_label{
+  overflow: hidden;
+  margin-top: 30rpx;
+}
+.visa_list_label view{
+  border: 1px solid #3d71ba;
+  font-size: 20rpx;
+  color: #3d71ba;
+  padding: 5rpx 8rpx; 
+  float: left;
+  border-radius: 4px;
+  margin-right: 8rpx;
+}
+
+.visa_list_content{
+  font-size: 24rpx;
+  color: #4e4e4e;
+  margin-top:24rpx; 
+}
+
+.visa_list_foot{
+  font-size: 24rpx;
+  color: #4382df;
+  margin:20rpx 0 30rpx 0; 
+}
+
+.visa_list_foot text:nth-child(2){
+  color: #5e5e5e;
+  padding-left: 20rpx;
+}
+
+.visa_price{
+    color: #5e5e5e;
+    float: right;
+}
+.visa_price text{
+  font-size: 28rpx;
+  color: #b85943;
+}
+
+
+/* 显示隐藏 */
+.mask {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6)
+}
+
+.mask_box {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    transform: translate(0, 100%);
+    backface-visibility: hidden;
+    z-index: 5000;
+    width: 100%;
+    background-color: #fff;
+    transition: transform .3s;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    overflow: hidden;
+    min-height: 40%;
+}
+
+.mask_box_toggle {
+    transform: translate(0, 0)
+}
+.mask_title{
+  width: 100%;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  margin: 30rpx 0 40rpx;
+}
+
+.mask_title_item{
+  width: 100%;
+  font-size: 22rpx;
+  color: #777777;
+  line-height: 40rpx;
+  text-align: center;
+  margin: 0  0 10rpx;
+}
+.mask_title_item text{
+  display: block;
+}
+
+.mask_content{
+  padding: 0 40rpx;
+  font-size: 24rpx;
+  color: #000;
+  line-height: 40rpx;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  margin-bottom: 70rpx;
+}
+.mask_content::after{
+  width: 154rpx;
+  height: 66rpx;
+  font-size: 26rpx;
+  color: #000;
+  text-align: center;
+  line-height: 66rpx;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+  content: "";
+}
+.mask_content view{
+  width: 154rpx;
+  height: 66rpx;
+  font-size: 26rpx;
+  color: #000;
+  text-align: center;
+  line-height: 66rpx;
+  border:1px solid #777777;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+}
+/* 关闭 */
+.close_btn{
+  position: absolute;
+  right: 30rpx;
+  top: 20rpx;
+}

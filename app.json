@@ -8,7 +8,8 @@
     "pages/user/user",
     "pages/login/login",
     "pages/loginModel/loginModel",
-    "pages/citys/citys"
+    "pages/citys/citys",
+    "pages/visaCity/visaCity"
   ],
   "window": {
     "backgroundTextStyle": "light",

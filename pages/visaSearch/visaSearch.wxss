@@ -85,7 +85,7 @@ page{
 /* 字母滑动 */
 
 .a-z{
-  width: 35rpx;
+  width: 55rpx;
   position: fixed;
   top: 112rpx;
   text-align: center;
@@ -99,3 +99,75 @@ page{
   height:40rpx;
 }
  
+
+
+ 
+.city-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+}
+ 
+.city-item {
+  width: 100%;
+  height: 86rpx;
+  padding:0 20rpx;  
+  box-sizing: border-box;
+}
+
+.city-item view{
+  width: 100%;
+  height: 86rpx;
+  font-size: 26rpx;
+  color: #000;
+  line-height: 86rpx;  
+  border-bottom: 1px #e4e4e4 solid;
+}
+/* .city-item:last-child view{
+  border:none;
+} */
+
+
+
+
+
+
+.city-item-A-Z{
+  width: 100%;
+  height: 50rpx;
+  background-color: #EEEEEE;
+  border-top: 1rpx solid #CCCCCC;    
+  margin-top: -1rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  color: #555555;
+  line-height: 50rpx;
+  padding-left: 20rpx;
+}
+ 
+ 
+.search-box {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background: #eee;
+  height: 110rpx;
+  font-size: 30rpx;
+  border-bottom:1rpx solid #DDDDDD; 
+}
+ 
+.search-input {
+  height: 70rpx;
+  line-height: 60rpx;
+  width: 80%;
+  margin-left: 7.5%;
+  border-radius: 20rpx;
+  background: #fff;
+  margin-top: 20rpx;
+  padding-left: 5%;
+}
+ 
+.search-input-placeholder {
+  text-align: center;
+}

@@ -1,7 +1,9 @@
 <!--index.wxml-->
-<view class='flex-box' data-id='出发城市'>
-  <view class='flex-box-header'>选择城市</view>
-  <view class="flex-box-content">
-    <input name='beginCity' value='{{trainCity}}' disabled='disabled' placeholder="" bindtap='bindCityView' class='input-city'/>
-  </view>
+<view bindtap="bindCityView">点击</view>
+
+<view bindtap="closeView">取消</view>
+
+<view wx:if="{{mask}}" class="weui-mask {{show ? '' : 'weui-mask_hidden'}} {{maskClass}}" bindtap="closeActionSheet"></view>
+<view class="weui-actionsheet {{show ? 'weui-actionsheet_toggle' : ''}}">
+sdfsdfsdf
 </view>

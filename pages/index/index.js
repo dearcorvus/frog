@@ -7,7 +7,9 @@ const ui = require('../../utils/ui.js')
 
 Page({
   data: {
-    trainCity: ''
+    trainCity: '',
+    show:false,
+    mask:false
   },
   onLoad: function (options) {
 
@@ -16,11 +18,17 @@ Page({
     wx.stopPullDownRefresh();
   },
   bindCityView: function () {
-    wx.navigateTo({
-      url: '../citys/citys',
+    this.setData({
+      show:true,
+      mask:true
+    })
+  },
+  closeView: function () {
+    this.setData({
+      show: false,
+      mask: false
     })
   },
   onShow: function () {
-    this.setData({ trainCity: app.globalData.trainCity })
   }
 })

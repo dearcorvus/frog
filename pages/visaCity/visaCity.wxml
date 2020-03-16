@@ -1,0 +1,163 @@
+<!--pages/visaCity/visaCity.wxml-->
+
+<!-- banner -->
+<view class="visa_banner">
+  <image src="../../public/img/visa.jpg"></image>
+  <view class="visa_banner_title" bindtap="showCity">
+    <text>常住地</text>
+    <text>|</text>
+    <view>北京 <mp-icon type="field" icon="arrow" color="#fff" size="10" extClass='serarch_arrow'></mp-icon></view>
+  </view>
+  <view class="visa_notice" bindtap="showNotice">
+    <view class="visa_notice_item" >
+        <text>公告:</text>
+        <text>2020年3月13号到9月30日泰国落地签取消,电子签取消</text>
+    </view>
+    <mp-icon type="field" icon="arrow" color="#c66542" size="10" ></mp-icon>
+  </view>
+</view>
+
+<!-- 签证分类 -->
+<view class="visa_nav"> 
+  <view class="visa_nav_check">个人旅游</view>
+  <view>商务签证</view>
+  <view>探亲访友</view>
+  <view>留学签证</view>
+</view>
+
+<!-- 签证种类 -->
+<view class="visa_class">
+  <view class="visa_class_check">
+    <text>3个月单次</text>
+    <text>￥358起</text>
+  </view>
+  <view>
+    <text>3个月单次</text>
+    <text>￥358起</text>
+  </view>
+</view>
+
+<!-- 商品列表 -->
+<view class="visa_list_box">
+  <view class="visa_list_item">
+    <view class="visa_list_title">韩国旅游签证[北京送签]+北京市身份</view>
+    <view class="visa_list_label">
+      <view>顺丰包邮</view>
+      <view>单次</view>
+    </view>
+    <view class="visa_list_content">携程自营 最早4月14日出发</view>
+    <view class="visa_list_foot">
+      <text>4.9分</text>
+      <text>6213人办理</text>
+      <view class="visa_price">
+        <text>￥358</text> 起
+      </view>
+    </view>
+  </view>
+
+  <view class="visa_list_item">
+    <view class="visa_list_title">韩国旅游签证[北京送签]+北京市身份</view>
+    <view class="visa_list_label">
+      <view>顺丰包邮</view>
+      <view>单次</view>
+    </view>
+    <view class="visa_list_content">携程自营 最早4月14日出发</view>
+    <view class="visa_list_foot">
+      <text>4.9分</text>
+      <text>6213人办理</text>
+      <view class="visa_price">
+        <text>￥358</text> 起
+      </view>
+    </view>
+  </view>
+
+   <view class="visa_list_item">
+    <view class="visa_list_title">韩国旅游签证[北京送签]+北京市身份</view>
+    <view class="visa_list_label">
+      <view>顺丰包邮</view>
+      <view>单次</view>
+    </view>
+    <view class="visa_list_content">携程自营 最早4月14日出发</view>
+    <view class="visa_list_foot">
+      <text>4.9分</text>
+      <text>6213人办理</text>
+      <view class="visa_price">
+        <text>￥358</text> 起
+      </view>
+    </view>
+  </view>
+
+  <view class="visa_list_item">
+    <view class="visa_list_title">韩国旅游签证[北京送签]+北京市身份</view>
+    <view class="visa_list_label">
+      <view>顺丰包邮</view>
+      <view>单次</view>
+    </view>
+    <view class="visa_list_content">携程自营 最早4月14日出发</view>
+    <view class="visa_list_foot">
+      <text>4.9分</text>
+      <text>6213人办理</text>
+      <view class="visa_price">
+        <text>￥358</text> 起
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 遮罩层 -->
+<view wx:if="{{mask}}" class="mask {{showNotice ? '' : 'mask_hidden'}}" bindtap="closeActionSheet"></view>
+<!-- 公告 -->
+<view class="mask_box {{showNotice ? 'mask_box_toggle' : ''}}">
+  <mp-icon type="field" icon="close" size="20" extClass='close_btn' bindtap="closeActionSheet"></mp-icon>
+  <view class="mask_title">公告</view>
+  <view class="mask_content">
+    2020年3月13号到9月30日泰国落地签取消,电子签取消,2020年3月13号到9月30日泰国落地签取消,电子签取消,2020年3月13号到9月30日泰国落地签取消,电子签取消
+  </view>
+</view>
+
+<!-- 长居住地 -->
+<view class="mask_box {{showCity ? 'mask_box_toggle' : ''}}">
+  <mp-icon type="field" icon="close" size="20" extClass='close_btn' bindtap="closeActionSheet"></mp-icon>
+  <view class="mask_title">选择常住地</view>
+  <view class="mask_title_item">
+    <text>常住地是连续居住满6个月及以上的地区,</text>
+    <text>部分签证系提供有效的居住证件,请选择您的常住地</text> 
+  </view>
+  <view class="mask_content">
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+    <view>北京</view>
+        <view>北京</view>
+  </view>
+</view>

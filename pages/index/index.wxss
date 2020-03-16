@@ -1,31 +1,29 @@
 /**index.wxss**/
-.flex-box {
-  display: flex;
-  flex-direction: row;
-  border-bottom: #CCCCCC solid 1px;
-  margin: 28rpx;
-  width: 600rpx;
-  padding:10rpx;
-  height: 70rpx;
+.weui-mask {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6)
 }
- 
- 
-.flex-box-header{
-  width: 25%;
-  font-size: 30rpx;
-  margin-top: 10rpx;
-  color: #999999;
- 
-  /* line-height: 60rpx; */
+
+.weui-actionsheet {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    transform: translate(0, 100%);
+    backface-visibility: hidden;
+    z-index: 5000;
+    width: 100%;
+    background-color: #EAE7E8;
+    transition: transform .3s;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    overflow: hidden
 }
- 
-.flex-box-content{
-  width: 70%;
-  margin-top: 0rpx; 
-  font-size: 45rpx;
+
+.weui-actionsheet_toggle {
+    transform: translate(0, 0)
 }
-.flex-box-content-pricker{
-  margin-top: 0rpx; 
-  width: 70%;
-  font-size: 45rpx;
-}  
