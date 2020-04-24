@@ -2,8 +2,14 @@
 <view bindtap="createImg">生成</view>
 <!-- 遮罩层 -->
 <view wx:if="{{mask}}" class="mask {{showOrder ? '' : 'mask_hidden'}}" bindtap="closeActionSheet">
-  <view class="mask-box" bindlongpress='saveInviteCard'>
-    <canvas canvas-id="shareCanvas" style="height:{{windowHeight}}px" ></canvas>
-  </view>
 </view>
-
+<view class="mask-box {{showOrder ? 'mask_box_toggle' : ''}}" bindlongpress='saveInviteCard'>
+  <view class="share-top">
+    <text>保存到相册</text>
+    <mp-icon type="field" icon="close" color="black" size="{{25}}" bindtap="closeTo"></mp-icon>
+  </view>
+  <view class="canvas-box">
+    <canvas canvas-id="shareCanvas" style="  width: 100%;height:{{wheight}}px"  class="canvas-info"></canvas>
+  </view>
+  <view class='baoTo'>保存图片</view>
+</view>

@@ -9,6 +9,8 @@ Page({
   data: {
     phoneInfo:[],
     mask: false,
+    sHeight:0,
+    wheight:''
   },
 
   /**
@@ -38,7 +40,8 @@ Page({
       success: function (res) {
         wc.setData({
           phoneInfo:res,
-          mask:true
+          mask: true,
+          showOrder: true
         })
       }
     });
@@ -46,7 +49,8 @@ Page({
     var windowHeight = phoneInfo.windowHeight, windowWidth = phoneInfo.windowWidth
     wc.setData({
       windowHeight: windowHeight,
-      windowWidth: windowWidth
+      windowWidth: windowWidth,
+      wheight: windowHeight  * 0.6
     })
 
     //在这段代码中，我们通过使用wx.getImageInfo这个API来下载一个网络图片到本地（并可获取该图片的尺寸等其他信息），然后调用ctx.drawImage方法将图片绘制到画布上，填满画布。
@@ -68,13 +72,13 @@ Page({
         const ctx = wx.createCanvasContext('shareCanvas')
 
         // 底图
-        ctx.drawImage(res[0].path, 0, 0, windowWidth, windowHeight)
+        ctx.drawImage(res[0].path, 0, 0, windowWidth - 160,200)
 
         //写入文字
         ctx.setTextAlign('center')    // 文字居中
         ctx.setFillStyle('#f3a721')  // 文字颜色：黑色
         ctx.setFontSize(22)         // 文字字号：22px
-        ctx.fillText("作者：墜夢—Eric", windowWidth / 2, windowHeight / 2)
+        ctx.fillText("作者：墜夢—Eric", '20', '300')
 
         // 小程序码
         const qrImgSize = 150
@@ -106,6 +110,12 @@ Page({
       wx.showToast({
         title: '已保存到相册'
       })
+    })
+  },
+  closeTo:function(){
+    this.setData({
+      mask: false,
+      showOrder: false
     })
   }
 })
