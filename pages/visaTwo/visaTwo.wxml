@@ -1,0 +1,56 @@
+<!--pages/visaTwo/visaTwo.wxml-->
+<mp-nav></mp-nav>
+
+<view class="visa-box">
+  <view class="visa-title">日本特卖</view>
+  <view class="visa-subtitle">查看全部></view>
+  <view class="visa-list">
+    <view class="visa-banner" style="  background-image: url('../../public/img/goods.jpg');">
+      <view class="visa-label">
+        <view>日本签证/200元起</view>
+        <view>品质服务保障材料</view>
+      </view>
+    </view>
+    <view class="visa-item">
+      <view class="visa-item-image"><image src="../../public/img/goods.jpg"></image></view>
+      <view class="visa-item-info">
+        <view>日本三年多次签</view>
+        <view>560元 <text>起</text> </view>
+      </view>
+    </view>
+    <view class="visa-item">
+      <view class="visa-item-image"><image src="../../public/img/goods.jpg"></image></view>
+      <view class="visa-item-info">
+        <view>日本三年多次签</view>
+        <view>560元 <text>起</text> </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="visa-box">
+  <view class="visa-title">韩国特卖</view>
+  <view class="visa-subtitle">查看全部></view>
+  <view class="visa-list">
+    <view class="visa-banner" style="  background-image: url('../../public/img/goods.jpg');">
+      <view class="visa-label">
+        <view>日本签证/200元起</view>
+        <view>品质服务保障材料</view>
+      </view>
+    </view>
+    <view class="visa-item">
+      <view class="visa-item-image"><image src="../../public/img/goods.jpg"></image></view>
+      <view class="visa-item-info">
+        <view>日本三年多次签</view>
+        <view>560元 <text>起</text> </view>
+      </view>
+    </view>
+    <view class="visa-item">
+      <view class="visa-item-image"><image src="../../public/img/goods.jpg"></image></view>
+      <view class="visa-item-info">
+        <view>日本三年多次签</view>
+        <view>560元 <text>起</text> </view>
+      </view>
+    </view>
+  </view>
+</view>

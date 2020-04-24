@@ -1,0 +1,9 @@
+<!--pages/invitation/invitation.wxml-->
+<view bindtap="createImg">生成</view>
+<!-- 遮罩层 -->
+<view wx:if="{{mask}}" class="mask {{showOrder ? '' : 'mask_hidden'}}" bindtap="closeActionSheet">
+  <view class="mask-box" bindlongpress='saveInviteCard'>
+    <canvas canvas-id="shareCanvas" style="height:{{windowHeight}}px" ></canvas>
+  </view>
+</view>
+

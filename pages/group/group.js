@@ -1,4 +1,4 @@
-// pages/ticket/ticket.js
+// pages/group/group.js
 const ui = require('../../utils/ui.js')
 
 Page({
@@ -7,22 +7,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    ticketSwitch:1
+
   },
   /**
    * 查询机票
    */
-  ticketList:function(){
+  ticketList: function () {
     ui.navigateTo("../ticketList/ticketList")
-  },
-  /**
-  * 切换行程
-  */
-  ticketSwitch:function(){
-    let that = this
-    that.setData({
-      ticketSwitch : that.data.ticketSwitch == 1 ? 2 : 1
-    })
   },
   /**
    * 生命周期函数--监听页面加载

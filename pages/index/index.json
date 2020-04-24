@@ -1,5 +1,10 @@
 {
+  "navigationBarTitleText": "青蛙旅行",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#4c9eea",
   "usingComponents": {
-    "mp-actionSheet": "../../components/actionsheet/actionsheet"
+    "mp-actionSheet": "../../components/actionsheet/actionsheet",
+    "mp-nav": "../../components/nav/nav",
+    "mp-icon": "../../components/icon/icon"
   }
 }

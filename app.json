@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/invitation/invitation",
+    "pages/canvas/canvas",
+    "pages/map/map",
     "pages/index/index",
     "pages/home/home",
     "pages/visaSearch/visaSearch",
@@ -9,7 +12,12 @@
     "pages/login/login",
     "pages/loginModel/loginModel",
     "pages/citys/citys",
-    "pages/visaCity/visaCity"
+    "pages/visaCity/visaCity",
+    "pages/ticketList/ticketList",
+    "pages/search/search",
+    "pages/visaTwo/visaTwo",
+    "components/nav/nav",
+    "pages/group/group"
   ],
   "window": {
     "backgroundTextStyle": "light",

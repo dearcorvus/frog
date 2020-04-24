@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "查询",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#4c9eea",
+  "usingComponents": {
+        "mp-icon": "../../components/icon/icon"
+  }
+}

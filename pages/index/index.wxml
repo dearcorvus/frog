@@ -1,9 +1,189 @@
 <!--index.wxml-->
-<view bindtap="bindCityView">点击</view>
+<view class="init" animation="{{slide_up1}}">
+  <mp-nav></mp-nav>
+  <!-- banner -->
+  <view class="home_box" >
+    <view class="home_banner">
+      <swiper class="swiper" indicator-dots="true"  style="height:{{height}}px">
+        <block wx:for="{{movies}}" wx:for-index="index" wx:key="">
+          <swiper-item>
+            <video id="myVideo" src='{{item.video_str}}' bindtap="bofang" controls='true'  poster="{{item.img}}"   wx:if="{{item.type == 2}}"></video>
+            <image src="{{item.img}}" class="slide-image" mode="aspectFill" bindload="setContainerHeight" bindtap="{{item.goods_id ? 'goodsTo':''}}"  data-value="{{item.goods_id}}"  wx:if="{{item.type == 1}}"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <!-- 优惠券 -->
+  <view class="activities-box">
+    <view class="activities-item" wx:for="{{activities}}">
+      <view>¥ <text>5</text></view>
+      <view>满201元使用</view>
+      <view>立即领取</view>
+    </view>
+  </view>
+  <!-- 栏目 -->
+  <view class="column-box">
+    <navigator url="../visaTwo/visaTwo" class="column-item">
+      <image src="../../public/img/qw.png"></image>
+      <text>签证</text>
+    </navigator>
+    <navigator url="../group/group" class="column-item">
+      <image src="../../public/img/qw.png"></image>
+      <text>团票散卖</text>
+    </navigator>    
+    <view class="column-item">
+      <image src="../../public/img/qw.png"></image>
+      <text>日本跟团游</text>
+    </view>
+    <view class="column-item">
+      <image src="../../public/img/qw.png"></image>
+      <text>海外代购</text>
+    </view>
+  </view>
 
-<view bindtap="closeView">取消</view>
+  <!-- 签证 -->
+  <view class='visa-box'>
+    <view class='vias-title'>极速办理·签证</view>
+    <view class="vias-list">
+      <view class="vias-img"><image src="../../public/img/visa.jpg" mode="widthFix"></image></view>
+      <view class="vias-lable">
+        <view>韩国个人签证</view>
+        <view>韩国五年签证</view>
+        <view>韩国十年签证</view>
+      </view>
+      <view class="vias-bottom">
+        <view>免流水\免在职</view>
+        <view>了解更多>></view>
+      </view>
+    </view>
 
-<view wx:if="{{mask}}" class="weui-mask {{show ? '' : 'weui-mask_hidden'}} {{maskClass}}" bindtap="closeActionSheet"></view>
-<view class="weui-actionsheet {{show ? 'weui-actionsheet_toggle' : ''}}">
-sdfsdfsdf
+    <view class="vias-list">
+      <view class="vias-img"><image src="../../public/img/visa.jpg" mode="widthFix"></image></view>
+      <view class="vias-lable">
+        <view>韩国个人签证</view>
+        <view>韩国五年签证</view>
+        <view>韩国十年签证</view>
+      </view>
+      <view class="vias-bottom">
+        <view>免流水\免在职</view>
+        <view>了解更多>></view>
+      </view>
+    </view>
+
+    <view class="vias-list">
+      <view class="vias-img"><image src="../../public/img/visa.jpg" mode="widthFix"></image></view>
+      <view class="vias-lable">
+        <view>韩国个人签证</view>
+        <view>韩国五年签证</view>
+        <view>韩国十年签证</view>
+      </view>
+      <view class="vias-bottom">
+        <view>免流水\免在职</view>
+        <view>了解更多>></view>
+      </view>
+    </view>    
+  </view>
+
+  <!-- 机票 -->
+  <view class='ticket-box'>
+    <view class="ticket-title">团票散卖·机票</view>
+    <view class="ticket-list">
+        <view class="ticket-item">
+          <view class="ticket-img"><image src="../../public/img/visa.jpg" mode="widthFix"></image></view>
+          <view class="ticket-info">
+            <view>北京--东京</view>
+            <view>往返6天</view>
+            <view>1999元起</view>
+            <view>查看详情</view>
+          </view>
+        </view>
+    </view>
+
+    <view class="ticket-list">
+        <view class="ticket-item">
+          <view class="ticket-img"><image src="../../public/img/visa.jpg" mode="widthFix"></image></view>
+          <view class="ticket-info">
+            <view>北京--东京</view>
+            <view>往返6天</view>
+            <view>1999元起</view>
+            <view>查看详情</view>
+          </view>
+        </view>
+    </view>
+
+    <view class="ticket-list">
+        <view class="ticket-item">
+          <view class="ticket-img"><image src="../../public/img/visa.jpg" mode="widthFix"></image></view>
+          <view class="ticket-info">
+            <view>北京--东京</view>
+            <view>往返6天</view>
+            <view>1999元起</view>
+            <view>查看详情</view>
+          </view>
+        </view>
+    </view>
+  </view>
+
+  <!-- 出境跟团 -->
+  <view class="tour-box">
+    <view class="tour-title">出境跟团·日本</view>
+    <view class="tour-list">
+
+      <view class="tour-item" style="background-image: url(http://qingwatour.com:81/img/img/1.jpg)">
+        <view class="tour-info">
+          <view class="toure-name">日本北海道跟团</view>
+          <view class="tour-price">5980元起</view>
+        </view>
+      </view>
+
+      <view class="tour-item" style="background-image: url(http://qingwatour.com:81/img/img/1.jpg)">
+        <view class="tour-info">
+          <view class="toure-name">日本北海道跟团</view>
+          <view class="tour-price">5980元起</view>
+        </view>
+      </view>
+
+      <view class="tour-item" style="background-image: url(http://qingwatour.com:81/img/img/1.jpg)">
+        <view class="tour-info">
+          <view class="toure-name">日本北海道跟团</view>
+          <view class="tour-price">5980元起</view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <!-- 代购 -->
+  <view class="goods-box">
+    <view class="goods-title">海外代购·爆款</view>
+    <view class="goods-list">
+
+      <view class="goods-item" style="background-image: url(http://qingwatour.com:81/img/img/1.jpg)">
+        <view class="goods-info">
+          <view class="goods-item-title">洁护合一 抗菌无泪</view>
+          <view class="goods-label">蓓昂斯卸妆水500ml</view>
+          <view class="goods-btn">去购买</view>
+        </view>
+      </view>
+
+      <view class="goods-item" style="background-image: url(http://qingwatour.com:81/img/img/1.jpg)">
+        <view class="goods-info">
+          <view class="goods-item-title">洁护合一 抗菌无泪</view>
+          <view class="goods-label">蓓昂斯卸妆水500ml</view>
+          <view class="goods-btn">去购买</view>
+        </view>
+      </view>
+
+      <view class="goods-item" style="background-image: url(http://qingwatour.com:81/img/img/1.jpg)">
+        <view class="goods-info">
+          <view class="goods-item-title">洁护合一 抗菌无泪</view>
+          <view class="goods-label">蓓昂斯卸妆水500ml</view>
+          <view class="goods-btn">去购买</view>
+        </view>
+      </view>
+
+    </view>
+  </view>
 </view>
+

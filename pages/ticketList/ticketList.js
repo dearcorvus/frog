@@ -1,27 +1,26 @@
-// pages/ticket/ticket.js
-const ui = require('../../utils/ui.js')
-
+// pages/ticketList/ticketList.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    ticketSwitch:1
+    navCheck:null,
+    navData:[
+      { navName: "筛选", img:"bsx"},
+      { navName: "直飞优先", img: "bpx", },
+      { navName: "低价优先", img: "bjg", },
+      { navName: "更多排序", img: "bgd", }
+    ]
   },
   /**
-   * 查询机票
+   * 排序
    */
-  ticketList:function(){
-    ui.navigateTo("../ticketList/ticketList")
-  },
-  /**
-  * 切换行程
-  */
-  ticketSwitch:function(){
-    let that = this
-    that.setData({
-      ticketSwitch : that.data.ticketSwitch == 1 ? 2 : 1
+  navCheck:function(e){
+    let navEq = e.currentTarget.dataset.value;
+
+    this.setData({
+      navCheck: navEq
     })
   },
   /**

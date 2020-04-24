@@ -1,0 +1,5 @@
+<!--pages/map/map.wxml-->
+
+<canvas canvas-id="myCanvas" style="width: 690px;height:500px;"></canvas>
+
+<view bindtap="handlePoster" >点击</view> 

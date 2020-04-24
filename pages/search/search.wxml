@@ -1,0 +1,184 @@
+<!--pages/search/search.wxml-->
+<!-- 查询 -->
+<view class="search_box">
+  <view>
+    <icon class="INsearchicon" type="search" size="20"/>
+    <input class="weui-input" placeholder="搜索本店商品" bindconfirm='searchTo' value="{{searchValue}}" />
+  </view>
+</view>
+<!-- 筛选 -->
+<view class="search-label">
+  <view>推荐排序</view>
+  <view>天数/出发日期</view>
+  <view>筛选</view>
+</view>
+<view class="search-list">
+
+  <view class="search-item">
+    <view class="search-item-img">
+      <image src="../../public/img/goods.jpg"></image>
+    </view>
+    <view class="search-item-info">
+      <view class="search-item-title">樱花限定日本旅游大版京都奈良6天5晚纯玩日式四家团环意</view>
+      <view class="search-item-label">
+        <view>二次确认</view>
+        <view>纯玩团</view>
+        <view>一价全含</view>
+      </view>
+      <view class="search-item-evaluate">好评率90% 月销300笔</view>
+      <view class="search-price">
+        <view class="search-company">
+          <text>月销28笔</text>
+          <text>¥<text class="search-price">5999起</text></text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="search-item">
+    <view class="search-item-img">
+      <image src="../../public/img/goods.jpg"></image>
+    </view>
+    <view class="search-item-info">
+      <view class="search-item-title">樱花限定日本旅游大版京都奈良6天5晚纯玩日式四家团环意</view>
+      <view class="search-item-label">
+        <view>二次确认</view>
+        <view>纯玩团</view>
+        <view>一价全含</view>
+      </view>
+      <view class="search-item-evaluate">好评率90% 月销300笔</view>
+      <view class="search-price">
+        <view class="search-company">
+          <text>月销28笔</text>
+          <text>¥<text class="search-price">5999起</text></text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="search-item">
+    <view class="search-item-img">
+      <image src="../../public/img/goods.jpg"></image>
+    </view>
+    <view class="search-item-info">
+      <view class="search-item-title">樱花限定日本旅游大版京都奈良6天5晚纯玩日式四家团环意</view>
+      <view class="search-item-label">
+        <view>二次确认</view>
+        <view>纯玩团</view>
+        <view>一价全含</view>
+      </view>
+      <view class="search-item-evaluate">好评率90% 月销300笔</view>
+      <view class="search-price">
+        <view class="search-company">
+          <text>月销28笔</text>
+          <text>¥<text class="search-price">5999起</text></text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="search-item">
+    <view class="search-item-img">
+      <image src="../../public/img/goods.jpg"></image>
+    </view>
+    <view class="search-item-info">
+      <view class="search-item-title">樱花限定日本旅游大版京都奈良6天5晚纯玩日式四家团环意</view>
+      <view class="search-item-label">
+        <view>二次确认</view>
+        <view>纯玩团</view>
+        <view>一价全含</view>
+      </view>
+      <view class="search-item-evaluate">好评率90% 月销300笔</view>
+      <view class="search-price">
+        <view class="search-company">
+          <text>月销28笔</text>
+          <text>¥<text class="search-price">5999起</text></text>
+        </view>
+      </view>
+    </view>
+  </view>    
+
+  <view class="search-item">
+    <view class="search-item-img">
+      <image src="../../public/img/goods.jpg"></image>
+    </view>
+    <view class="search-item-info">
+      <view class="search-item-title">樱花限定日本旅游大版京都奈良6天5晚纯玩日式四家团环意</view>
+      <view class="search-item-label">
+        <view>二次确认</view>
+        <view>纯玩团</view>
+        <view>一价全含</view>
+      </view>
+      <view class="search-item-evaluate">好评率90% 月销300笔</view>
+      <view class="search-price">
+        <view class="search-company">
+          <text>月销28笔</text>
+          <text>¥<text class="search-price">5999起</text></text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="search-item">
+    <view class="search-item-img">
+      <image src="../../public/img/goods.jpg"></image>
+    </view>
+    <view class="search-item-info">
+      <view class="search-item-title">樱花限定日本旅游大版京都奈良6天5晚纯玩日式四家团环意</view>
+      <view class="search-item-label">
+        <view>二次确认</view>
+        <view>纯玩团</view>
+        <view>一价全含</view>
+      </view>
+      <view class="search-item-evaluate">好评率90% 月销300笔</view>
+      <view class="search-price">
+        <view class="search-company">
+          <text>月销28笔</text>
+          <text>¥<text class="search-price">5999起</text></text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="search-item">
+    <view class="search-item-img">
+      <image src="../../public/img/goods.jpg"></image>
+    </view>
+    <view class="search-item-info">
+      <view class="search-item-title">樱花限定日本旅游大版京都奈良6天5晚纯玩日式四家团环意</view>
+      <view class="search-item-label">
+        <view>二次确认</view>
+        <view>纯玩团</view>
+        <view>一价全含</view>
+      </view>
+      <view class="search-item-evaluate">好评率90% 月销300笔</view>
+      <view class="search-price">
+        <view class="search-company">
+          <text>月销28笔</text>
+          <text>¥<text class="search-price">5999起</text></text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="search-item">
+    <view class="search-item-img">
+      <image src="../../public/img/goods.jpg"></image>
+    </view>
+    <view class="search-item-info">
+      <view class="search-item-title">樱花限定日本旅游大版京都奈良6天5晚纯玩日式四家团环意</view>
+      <view class="search-item-label">
+        <view>二次确认</view>
+        <view>纯玩团</view>
+        <view>一价全含</view>
+      </view>
+      <view class="search-item-evaluate">好评率90% 月销300笔</view>
+      <view class="search-price">
+        <view class="search-company">
+          <text>月销28笔</text>
+          <text>¥<text class="search-price">5999起</text></text>
+        </view>
+      </view>
+    </view>
+  </view>        
+</view>

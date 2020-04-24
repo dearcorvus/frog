@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "签证",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#4c9eea",
+  "usingComponents": {
+    "mp-nav": "../../components/nav/nav"
+  }
+}

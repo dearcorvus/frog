@@ -1,29 +1,290 @@
 /**index.wxss**/
-.weui-mask {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6)
+.init{
+  /* padding-top: 200px; */
 }
 
-.weui-actionsheet {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    transform: translate(0, 100%);
-    backface-visibility: hidden;
-    z-index: 5000;
-    width: 100%;
-    background-color: #EAE7E8;
-    transition: transform .3s;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    overflow: hidden
+
+/**banner**/
+.swiper {
+  width: 100%;
+  padding: 0;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+/* 优惠券 */
+.activities-box{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.activities-item{
+  width: 240rpx;
+  background-color: #ffd60a;
+  font-size: 26rpx;
+  color: #fff;
+  padding: 10rpx;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+.activities-item text{
+  font-size: 34rpx;
+}
+.activities-item view:nth-child(1){
+  font-weight: 600;
+}
+.activities-item view:nth-child(3){
+  width: 100%;
+  height: 50rpx;
+  background-color: #fff;
+  color: #ffcc00;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 20rpx;
+  margin-top: 10rpx;
+}
+.activities-item:nth-child(3){
+  margin: 0;
+}
+.activities-box{
+  padding: 20rpx;
+  box-sizing: border-box;
+  background-color: #64c858;
 }
 
-.weui-actionsheet_toggle {
-    transform: translate(0, 0)
+/* 栏目 */
+.column-box{
+  width: 100%;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.column-item{
+  width: 140rpx;
+  font-size: 26rpx;
+  color: #000;
+  text-align: center;
+}
+.column-item image{
+  width: 100%;
+  height: 140rpx;
+}
+
+/* 签证 */
+.visa-box{
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.vias-title{
+  font-size: 34rpx;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+}
+.vias-list{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.vias-img{
+  width: 100%;
+}
+.vias-img image{
+  width: 100%;
+}
+.vias-lable{
+  font-size: 30rpx;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-start;
+}
+.vias-lable view{
+  padding: 0 10rpx;
+  background-color: #ff3b30;
+  margin-right: 10rpx;
+  border-radius: 10rpx;
+}
+.vias-lable view:nth-child(2n){
+  background-color: #fff;
+  color: #ff3b30;
+  border:solid 1px #ff3b30;
+}
+.vias-bottom{
+  width: 100%;
+  height: 80rpx;
+  font-size: 26rpx;
+  color: #000;
+  line-height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.vias-bottom view:nth-child(2){
+  width: 160rpx;
+  height: 40rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+  background-color: #ff3b30;
+}
+
+.ticket-title{
+  font-size: 34rpx;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+}
+.ticket-item{
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.ticket-img{
+  width: 60%;
+}
+.ticket-img image{
+  width: 100%;
+}
+.ticket-info{
+  width: 40%;
+}
+.ticket-info view{
+  margin-top: 10%;
+}
+.ticket-info view:nth-child(1){
+  font-size: 32rpx;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+}
+.ticket-info view:nth-child(2){
+  font-size: 32rpx;
+  color: #000;
+  text-align: center;
+}
+.ticket-info view:nth-child(3){
+  font-size: 32rpx;
+  color: #ff3b30;
+  font-weight: 600;
+  text-align: center;
+}
+.ticket-info view:nth-child(4){
+  width: 120rpx;
+  height: 40rpx;
+  font-size: 24rpx;
+  color: #fff;
+  line-height: 40rpx;
+  text-align: center;
+  background-color: #ff3b30;
+  border-radius: 10rpx;
+  margin: 10% auto 0;
+}
+
+/* 出境游 */
+.tour-title{
+  font-size: 34rpx;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+}
+.tour-list{
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+}
+.tour-item{
+  width: 30%;
+  height: 300rpx;
+  margin-right: 5%;
+  background-size: 100% auto; 
+  background-repeat: no-repeat;
+  position: relative;
+}
+.tour-item:nth-child(3){
+  margin: 0;
+}
+.tour-info{
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+.toure-name{
+  width: 88%;
+  height: 50rpx;
+  background-color: #ff3b30;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 20rpx;
+  margin: -25rpx auto 0;
+}
+.tour-price{
+  font-size: 30rpx;
+  color: #ff3b30;
+  font-weight: 600;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+/* 海外代购 */
+.goods-title{
+  font-size: 34rpx;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+}
+.goods-list{
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+}
+.goods-item{
+  width: 30%;
+  height: 360rpx;
+  margin-right: 5%;
+  background-size: 100% auto; 
+  background-repeat: no-repeat;
+  position: relative;  
+}
+.goods-info{
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+.goods-item-title{
+  font-size: 24rpx;
+  color:#000;
+  text-align: center;
+}
+.goods-label{
+  font-size: 22rpx;
+  color: #98989d;
+  text-align: center;
+}
+.goods-btn{
+  width: 100rpx;
+  border: 1px solid #000;
+  font-size: 20rpx;
+  line-height: 30rpx;
+  border-radius:10rpx; 
+  text-align: center;
+  margin:  10rpx auto;
 }

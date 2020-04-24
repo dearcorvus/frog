@@ -1,0 +1,32 @@
+<!--pages/ticketList/ticketList.wxml-->
+
+<!-- 机票列表 -->
+<view class="ticket_box">
+  <!-- 时间分类 -->
+  <view class="ticket_date_nav">
+12313
+  </view>
+<!-- 列表 -->
+  <view class="ticket_list_item">
+    <view class="ticket_price">
+      <view>09:00 <image src="../../public/img/jt.png"></image> 11:15</view>
+      <view>
+        <text>￥</text>358
+        </view>
+    </view>
+    <view class="airport">
+      <view>首都机场T2</view>
+      <view>虹桥机场T2</view>
+    </view>
+  
+  
+  </view>
+</view>
+
+<!-- 底部筛选 -->
+<view class="ticketBottom">
+  <view wx:for="{{navData}}"  data-value="{{index}}" bindtap="navCheck" class="{{index == navCheck ? 'navCheck' : ''}}">
+    <image src="../../public/img/{{index == navCheck ? 'c' : ''}}{{item.img}}.png"></image>
+    <text>{{item.navName}}</text>
+  </view>
+</view>

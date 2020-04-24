@@ -1,0 +1,8 @@
+<!--components/nav/nav.wxml-->
+  <!-- 菜单 -->
+  <view class="nav-box">
+    <view class="nav-search" bindtap="searchTo"><mp-icon type="field" icon="search" color="#fff" size="18" extClass='serarch_btn'></mp-icon>搜索</view>
+    <view>首页</view>
+    <view>旅游</view>
+    <view>海外代购</view>
+  </view>

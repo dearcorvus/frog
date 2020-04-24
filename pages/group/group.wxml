@@ -1,10 +1,6 @@
-<!--pages/ticket/ticket.wxml-->
+<!--pages/group/group.wxml-->
 <view class="ticket_search_box">
-  <!-- 形成切换 -->
-  <view class="ticket_serch_switch">
-    <view class=" {{ticketSwitch == 1 ? 'ticket_serch_check' : '' }}" bindtap="ticketSwitch">单程</view>
-    <view class=" {{ticketSwitch == 2 ? 'ticket_serch_check' : '' }}" bindtap="ticketSwitch">往返</view>
-  </view>
+  <view class="ticket_serch_switch">往返机票</view>
 
   <view class="ticket_choose">
     <!-- 选择城市 -->
@@ -38,4 +34,6 @@
       <view>低价订阅</view>
     </view>
   </view>
+
+  <view class="group-banner"></view>
 </view>

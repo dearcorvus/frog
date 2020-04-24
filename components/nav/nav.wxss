@@ -1,0 +1,33 @@
+/* components/nav/nav.wxss */
+.nav-box{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #98989d;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.nav-box view{
+  height: 50rpx;
+  margin-right: 20rpx;
+  font-size: 28rpx;
+  color: #fff;
+  line-height: 50rpx;
+  border-bottom: 2rpx solid #98989d;
+}
+.nav-search{
+  width: 120rpx;
+  height: 60rpx;
+  font-size: 28rpx;
+  border-radius: 30rpx;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  padding: 0 10rpx;
+}
+
+.nav-box view:nth-child(2){
+  border-bottom-color: #fff;
+}
