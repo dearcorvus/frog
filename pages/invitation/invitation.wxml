@@ -1,5 +1,7 @@
 <!--pages/invitation/invitation.wxml-->
 <view bindtap="createImg">生成</view>
+<view bindtap="createMM">二维码</view>
+<image src="{{simg}}"></image>
 <!-- 遮罩层 -->
 <view wx:if="{{mask}}" class="mask {{showOrder ? '' : 'mask_hidden'}}" bindtap="closeActionSheet">
 </view>
@@ -11,5 +13,5 @@
   <view class="canvas-box">
     <canvas canvas-id="shareCanvas" style="  width: 100%;height:{{wheight}}px"  class="canvas-info"></canvas>
   </view>
-  <view class='baoTo'>保存图片</view>
+  <view class='baoTo' bindtap="saveInviteCard">保存图片</view>
 </view>

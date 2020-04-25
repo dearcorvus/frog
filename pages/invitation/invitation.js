@@ -65,24 +65,28 @@ Page({
       //二维码
       wxGetImageInfo({
         src: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1898297765,3486952215&fm=26&gp=0.jpg'
+      }),
+      wxGetImageInfo({
+        src: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1898297765,3486952215&fm=26&gp=0.jpg'
       })
     ]).then(res => {
       console.log(res)
       if (res[0].errMsg == "getImageInfo:ok" && res[1].errMsg == "getImageInfo:ok") {
         const ctx = wx.createCanvasContext('shareCanvas')
-
+        ctx.setFillStyle('#fff')
+        ctx.fillRect(0, 0, windowWidth - 160, 800)
         // 底图
         ctx.drawImage(res[0].path, 0, 0, windowWidth - 160,200)
 
         //写入文字
-        ctx.setTextAlign('center')    // 文字居中
-        ctx.setFillStyle('#f3a721')  // 文字颜色：黑色
-        ctx.setFontSize(22)         // 文字字号：22px
-        ctx.fillText("作者：墜夢—Eric", '20', '300')
+        // ctx.setTextAlign('center')    // 文字居中
+        ctx.setFillStyle('#000')  // 文字颜色：黑色
+        ctx.setFontSize(16)         // 文字字号：22px
+        ctx.fillText("作者：墜夢—Eric",20, 240)
 
         // 小程序码
-        const qrImgSize = 150
-        ctx.drawImage(res[1].path, (windowWidth - qrImgSize) / 2, windowHeight / 1.8, qrImgSize, qrImgSize)
+        const qrImgSize = 100
+        ctx.drawImage(res[2].path, (windowWidth - qrImgSize - 160) / 2, 250, qrImgSize, qrImgSize)
 
         ctx.stroke()
         ctx.draw()
@@ -116,6 +120,26 @@ Page({
     this.setData({
       mask: false,
       showOrder: false
+    })
+  },
+  createMM:function(){
+    let that = this
+    let ACCESS_TOKEN = "32_3n-crEiJj5cSbmmcHCSv7k_pE089AZYLKO4dhYWFyAju4d0EILhOObB2uqJw89vu1MWR9GydiXSPdj85wQi_30rWGsk9aVxaK4Z7g3KchFnVLECMcpyubMzlVn-M7yMT458eIpRsv-x-UdkEYSLeAHADXQ"
+    wx.request({
+      url: 'https://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token=' + ACCESS_TOKEN,
+      method: 'post',
+      data:{
+        scene:1,
+        page:'pages/index/index'
+      },
+      success:function(res){
+
+        let qrImg = res.data
+        console.log(qrImg)
+        that.setData({
+          simg: qrImg
+        })
+      }
     })
   }
 })
